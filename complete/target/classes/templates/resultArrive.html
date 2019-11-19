@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Lista de Aerolineas</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet"
+	th:href="@{webjars/bootstrap/4.2.1/css/bootstrap.min.css}" />
+<link rel="stylesheet" th:href="@{/css/main.css}" />
+</head>
+<body>
+	<main role="main" class="container">
+		<div class="starter-template">
+
+			<h1>Resultado</h1>
+
+				<table>
+					<thead>
+						<tr>
+							<td><p>Arrivos</p></td>
+						</tr>
+						
+					</thead>
+					<tbody>
+						<tr th:each="arrive : ${listado}">
+							<td th:text ="${arrive.aircraft}"></td>
+							
+
+						</tr>
+
+					</tbody>
+
+
+				</table>
+
+				<p>
+					<input type="submit" value="Submit" />
+				</p>
+		</div>
+	</main>
+
+
+</body>
+</html>
+
+
+

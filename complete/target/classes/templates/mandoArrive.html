@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lista de Aerolineas</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" th:href="@{webjars/bootstrap/4.2.1/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{/css/main.css}"/>
+</head>
+<body>
+<main role="main" class="container">
+    <div class="starter-template">
+    
+<h1>Buscar por valores</h1>
+<form action="#" th:action="@{/resultArrive}" th:object="${arrive}" method="post">
+
+	<p>Ingrese el horario en el cual quiere ver los arrivos </p>
+	
+	<p>Entre :</p>
+	
+    <input type="text" th:field="*{valor}" placeholder="00:00:00"/>
+    
+    <p>Y </p>
+    
+    <input type="text" th:field="*{valor1}" placeholder="00:00:00"/>
+
+    <p><input type="submit" value="Submit" /></p>
+</form>
+    </div>
+</main>
+
+
+
+</body>
